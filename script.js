@@ -33,14 +33,14 @@ async function postRandomString() {
     else if (deploy === "netlify") {
         updateVisuals("0", "0", "0");
 
-        // const config = {
-        //     method: 'GET',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //     }
-        // };
+        const config = {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+            }
+        };
 
-        const res = await fetch(`myfunctions/serverUpdateString?input=ATESTSTRING`);
+        const res = await fetch(`myfunctions/serverUpdateString?input=ATESTSTRING`, config);
         updateVisuals("1", "1", "1");
         const data = await res.json();
         updateVisuals("2", "2", "2");
