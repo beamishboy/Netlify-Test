@@ -44,7 +44,9 @@ async function postRandomString() {
         updateVisuals("1", "1", "1");
         const data = await res.json();
         updateVisuals("2", "2", "2");
+        console.log(data)
         stringToPost = data.retVal;
+        console.log(data.retVal);
     }
     else {
         stringToPost = "##ERROR##";
