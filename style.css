@@ -1,0 +1,80 @@
+body {
+    background-color: darkgray;
+}
+
+h4 {
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:32px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+
+.random-output {
+    padding: 20px;
+    margin: 20px 100px; 
+    width:50vw;
+    min-width: 500px;
+    min-height:15rem;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:16px;
+    text-transform: capitalize;
+}
+
+.btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    background-color: darkslateblue;
+    border: 1px solid white;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 20px 100px; 
+    width: 50vw;
+    min-width: 500px;
+}
+
+.btn:active {
+    transform: translate(1px, 1px);
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.char-desc {
+    padding: 20px;
+    width: 150px;
+    min-height: 110px;
+    border-radius:2px;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:52px;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+
+.char-label {
+    padding: 2px;
+    width: 150px;
+    min-height: 20px;
+    margin:  5px 0px;
+    box-sizing: border-box;
+    color:white;
+    background-color: darkslateblue;
+    border-radius:2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:12px;
+    text-transform: capitalize;
+    text-align: center; 
+}
