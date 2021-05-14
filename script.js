@@ -40,7 +40,7 @@ async function postRandomString() {
         //     }
         // };
 
-        const res = await fetch(`myfunctions/serverUpdateString?input=${stringToUpdate}`);
+        const res = await fetch(`myfunctions/serverUpdateString?input=ATESTSTRING`);
         updateVisuals("1", "1", "1");
         const data = await res.json();
         updateVisuals("2", "2", "2");
