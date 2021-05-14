@@ -35,15 +35,19 @@ function postRandomString() {
         updateVisuals("0", "0", "0");
         fetch(`myfunctions/serverUpdateString?input=${stringToUpdate}`)
             .then(res => res.json())
-            .then(data => stringToPost = data);
-
-        postString(stringToPost);
-
+            .then(data => {
+                updateVisuals("1", "1", "1");
+                stringToPost = data;
+            });
     }
+
+    postString(stringToPost);
+
+}
     else {
-        postString("##ERROR##");
-        updateVisuals("#", "#", "#");
-    }
+    postString("##ERROR##");
+    updateVisuals("#", "#", "#");
+}
 }
 
 const buttonEl = document.querySelector(".btn");
