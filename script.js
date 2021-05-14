@@ -1,8 +1,8 @@
 const deploy = "local"  //Possible valid values are "local" and "netlify"
 
 const stringLength = 180;
+const alphabetSeparation = 3;
 const charsBetween = 4;
-const alphabetSeparation = 2;
 
 const outputEl = document.querySelector(".random-output");
 
