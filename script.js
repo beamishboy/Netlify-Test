@@ -24,21 +24,27 @@ function postString(theString) {
     outputEl.innerHTML = "<pre>" + theString.split("").join("  ") + "</pre>";
 }
 
-function postRandomString() {
+async function postRandomString() {
     const stringToUpdate = generateRandomString();
     var stringToPost = "Initial";
     if (deploy === "local") {
         stringToPost = updateString(stringToUpdate);
-        postString(stringToPost);
     }
     else if (deploy === "netlify") {
         updateVisuals("0", "0", "0");
-        fetch(`myfunctions/serverUpdateString?input=${stringToUpdate}`)
-            .then(res => res.json())
-            .then(data => {
-                updateVisuals("1", "1", "1");
-                stringToPost = data;
-            });
+
+        // const config = {
+        //     method: 'GET',
+        //     headers: {
+        //         'Accept': 'application/json',
+        //     }
+        // };
+
+        const res = await fetch(`myfunctions/serverUpdateString?input=${stringToUpdate}`);
+        updateVisuals("1", "1", "1");
+        const data = await res.json();
+        updateVisuals("2", "2", "2");
+        stringToPost = data.retVal;
     }
 
     postString(stringToPost);

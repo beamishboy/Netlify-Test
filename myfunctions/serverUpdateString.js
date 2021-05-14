@@ -13,8 +13,10 @@ exports.handler = async function (event) {
 
     const stringToReturn = stringArray.join("");
 
-    return {
+    const response = {
         statusCode: 200,
-        body: stringToReturn,
+        retVal: stringToReturn,
     }
+
+    return JSON.stringify(response);
 }
