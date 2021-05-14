@@ -26,7 +26,7 @@ function postString(theString) {
 
 function postRandomString() {
     const stringToUpdate = generateRandomString();
-    var stringToPost;
+    var stringToPost = "Initial";
     if (deploy === "local") {
         stringToPost = updateString(stringToUpdate);
         postString(stringToPost);
@@ -37,7 +37,7 @@ function postRandomString() {
             .then(data => stringToPost = data);
 
         postString(stringToPost);
-        updateVisuals(" ", " ", " ");
+        updateVisuals("0", "0", "0");
     }
     else {
         postString("##ERROR##");
