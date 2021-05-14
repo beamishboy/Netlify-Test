@@ -32,12 +32,13 @@ function postRandomString() {
         postString(stringToPost);
     }
     else if (deploy === "netlify") {
+        updateVisuals("0", "0", "0");
         fetch(`myfunctions/serverUpdateString?input=${stringToUpdate}`)
             .then(res => res.json())
             .then(data => stringToPost = data);
 
         postString(stringToPost);
-        updateVisuals("0", "0", "0");
+
     }
     else {
         postString("##ERROR##");
