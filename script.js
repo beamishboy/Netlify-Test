@@ -46,14 +46,12 @@ async function postRandomString() {
         updateVisuals("2", "2", "2");
         stringToPost = data.retVal;
     }
+    else {
+        stringToPost = "##ERROR##";
+        updateVisuals("#", "#", "#");
+    }
 
     postString(stringToPost);
-
-}
-    else {
-    postString("##ERROR##");
-    updateVisuals("#", "#", "#");
-}
 }
 
 const buttonEl = document.querySelector(".btn");
