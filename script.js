@@ -32,7 +32,7 @@ function postRandomString() {
         postString(stringToPost);
     }
     else if (deploy === "netlify") {
-        fetch(`/.netlify/functions/serverUpdateString?input=${stringToUpdate}`)
+        fetch(`myfunctions/serverUpdateString?input=${stringToUpdate}`)
             .then(res => res.json())
             .then(data => stringToPost = data);
 
