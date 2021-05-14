@@ -1,4 +1,4 @@
-const deploy = "local"  //Possible valid values are "local" and "netlify"
+const deploy = "netlify"  //Possible valid values are "local" and "netlify"
 
 const stringLength = 180;
 const alphabetSeparation = 3;
