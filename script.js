@@ -1,11 +1,9 @@
 const deploy = "netlify"  //Possible valid values are "local" and "netlify"
-
 const stringLength = 180;
 const alphabetSeparation = 3;
 const charsBetween = 4;
 
 const stringToUpdate = "THISISATESTSTRING";
-
 const outputEl = document.querySelector(".random-output");
 
 function generateRandomCharacter() {
@@ -21,7 +19,6 @@ function generateRandomString() {
     }
     return retString;
 }
-
 function postString(theString) {
     outputEl.innerHTML = "<pre>" + theString.split("").join("  ") + "</pre>";
 }
