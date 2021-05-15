@@ -12,7 +12,7 @@ exports.handler = async function (event) {
     const stringArray = initString.split("");
     //stringArray[charsBetween + 1] = finalChar;
 
-    const stringToReturn = stringArray[charsBetween + 3];
+    const stringToReturn = stringArray[charsBetween];
 
 
     const response = {
