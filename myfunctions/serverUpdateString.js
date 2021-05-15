@@ -6,7 +6,7 @@ exports.handler = async function (event) {
     const initString = event.queryStringParameters.input;
 
 
-    // const rootUnicode = initString.charCodeAt(0);
+    const rootUnicode = initString.charCodeAt(0);
     // const finalUnicode = "A".charCodeAt(0) + (rootUnicode - "A".charCodeAt(0) + alphabetSeparation) % 26;
     // const finalChar = String.fromCharCode(finalUnicode);
 
