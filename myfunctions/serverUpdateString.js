@@ -13,7 +13,7 @@ exports.handler = async function (event) {
     const index = parseInt(charsBetween) + 1;
     stringArray[index] = finalChar;
 
-    const stringToReturn = stringArray.join("*")
+    const stringToReturn = stringArray.join("")
 
 
     const response = {
