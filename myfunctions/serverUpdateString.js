@@ -5,15 +5,14 @@ exports.handler = async function (event) {
     const alphabetSeparation = ALPHABET_SEPARATION;
     const initString = event.queryStringParameters.input;
 
-
-    const rootUnicode = initString.charCodeAt(0);
+    //const rootUnicode = initString.charCodeAt(0);
     // const finalUnicode = "A".charCodeAt(0) + (rootUnicode - "A".charCodeAt(0) + alphabetSeparation) % 26;
     // const finalChar = String.fromCharCode(finalUnicode);
 
     // const stringArray = initString.split("");
     // stringArray[charsBetween + 1] = finalChar;
 
-    // const stringToReturn = stringArray.join("");
+    const stringToReturn = initString + "##RETURNED"
 
 
     const response = {
