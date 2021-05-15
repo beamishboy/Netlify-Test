@@ -12,12 +12,11 @@ exports.handler = async function (event) {
     const stringArray = initString.split("");
     stringArray[charsBetween + 1] = finalChar;
 
-    const stringToReturn = initString + "##RETURNED"
+    const stringToReturn = stringArray.join("")
 
 
     const response = {
         statusCode: 200,
-        /*retVal: JSON.stringify(stringToReturn),*/
         body: JSON.stringify(stringToReturn),
     }
 
