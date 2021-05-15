@@ -4,6 +4,8 @@ const stringLength = 180;
 const alphabetSeparation = 3;
 const charsBetween = 4;
 
+const stringToUpdate = "THISISATESTSTRING";
+
 const outputEl = document.querySelector(".random-output");
 
 function generateRandomCharacter() {
@@ -40,7 +42,7 @@ async function postRandomString() {
             }
         };
 
-        const res = await fetch(`https://netlifytestserverless.netlify.app/.netlify/functions/serverUpdateString?input=ATESTSTRING`, config);
+        const res = await fetch(`https://netlifytestserverless.netlify.app/.netlify/functions/serverUpdateString?=${stringToUpdate}`, config);
         updateVisuals("1", "1", "1");
         const data = await res.json();
         updateVisuals("2", "2", "2");
