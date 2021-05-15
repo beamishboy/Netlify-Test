@@ -1,9 +1,9 @@
 exports.handler = async function (event) {
 
-    // const { CHARS_BETWEEN, ALPHABET_SEPARATION } = process.env;
-    // const charsBetween = CHARS_BETWEEN;
-    // const alphabetSeparation = ALPHABET_SEPARATION;
-    //const initString = event.queryStringParameters.input;
+    const { CHARS_BETWEEN, ALPHABET_SEPARATION } = process.env;
+    const charsBetween = CHARS_BETWEEN;
+    const alphabetSeparation = ALPHABET_SEPARATION;
+    const initString = event.queryStringParameters.input;
 
 
     // const rootUnicode = initString.charCodeAt(0);
