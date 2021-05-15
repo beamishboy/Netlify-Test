@@ -1,8 +1,8 @@
 exports.handler = async function (event) {
 
     const { CHARS_BETWEEN, ALPHABET_SEPARATION } = process.env;
-    const charsBetween = CHARS_BETWEEN;
-    const alphabetSeparation = ALPHABET_SEPARATION;
+    const charsBetween = parseInt(CHARS_BETWEEN);
+    const alphabetSeparation = parseInt(ALPHABET_SEPARATION);
     const initString = event.queryStringParameters.input;
 
     const rootUnicode = initString.charCodeAt(0);
@@ -10,7 +10,7 @@ exports.handler = async function (event) {
     const finalChar = String.fromCharCode(finalUnicode);
 
     const stringArray = initString.split("");
-    const index = parseInt(charsBetween) + 1;
+    const index = charsBetween + 1;
     stringArray[index] = finalChar;
 
     const stringToReturn = stringArray.join("")
