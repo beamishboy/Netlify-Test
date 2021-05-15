@@ -18,7 +18,7 @@ exports.handler = async function (event) {
     const response = {
         statusCode: 200,
         /*retVal: JSON.stringify(stringToReturn),*/
-        body: JSON.stringify("ADUMMYRESPONSEFROMFUNCTION"),
+        body: JSON.stringify(stringToReturn),
     }
 
     return response;
