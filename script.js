@@ -24,8 +24,8 @@ function postString(theString) {
 }
 
 async function postRandomString() {
-    //const stringToUpdate = generateRandomString();
-    const stringToUpdate = "THISISATESTSTRING";
+    const stringToUpdate = generateRandomString();
+    //const stringToUpdate = "THISISATESTSTRING";
     var stringToPost = "Initial";
     if (deploy === "local") {
         stringToPost = updateString(stringToUpdate);
