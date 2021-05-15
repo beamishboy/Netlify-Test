@@ -10,7 +10,7 @@ exports.handler = async function (event) {
     const finalChar = String.fromCharCode(finalUnicode);
 
     const stringArray = initString.split("");
-    const index = charsBetween + 1;
+    const index = parseInt(charsBetween) + 1;
     stringArray[index] = finalChar;
 
     const stringToReturn = stringArray.join("*")
