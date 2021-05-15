@@ -1,9 +1,11 @@
 exports.handler = async function (event) {
+
     const { CHARS_BETWEEN, ALPHABET_SEPARATION } = process.env;
     const charsBetween = CHARS_BETWEEN;
     const alphabetSeparation = ALPHABET_SEPARATION;
     const initString = event.queryStringParameters.input;
 
+    /*
     const rootUnicode = initString.charCodeAt(0);
     const finalUnicode = "A".charCodeAt(0) + (rootUnicode - "A".charCodeAt(0) + alphabetSeparation) % 26;
     const finalChar = String.fromCharCode(finalUnicode);
@@ -12,10 +14,12 @@ exports.handler = async function (event) {
     stringArray[charsBetween + 1] = finalChar;
 
     const stringToReturn = stringArray.join("");
+    */
 
     const response = {
         statusCode: 200,
-        retVal: stringToReturn,
+        /*retVal: stringToReturn,*/
+        retVal: "ADUMMYRESPONSEFROMFUNCTION"
     }
 
     return JSON.stringify(response);
