@@ -1,3 +1,5 @@
+const { sign } = require("crypto");
+
 exports.handler = async function (event) {
 
     // const { CHARS_BETWEEN, ALPHABET_SEPARATION } = process.env;
@@ -16,11 +18,12 @@ exports.handler = async function (event) {
     // stringArray[index] = finalChar;
 
     // const stringToReturn = stringArray.join("") + "#SIG#"
+    const stringToReturn = "SIGNATURE";
 
 
     const response = {
         statusCode: 200,
-        body: JSON.stringify("#SIGNATURERESPONSE"),
+        body: JSON.stringify(stringToReturn),
     }
 
     return response;
