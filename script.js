@@ -41,7 +41,7 @@ async function postRandomString() {
         console.log(`Initial string: ${stringToUpdate}`)
         const res = await fetch(`https://netlifytestserverless.netlify.app/.netlify/functions/serverUpdateString?input=${stringToUpdate}`, config);
         updateVisuals("1", "1", "1");
-        console.log(res);
+        //console.log(res);
         console.log("res.body: " + res.body);
         const data = await res.json();
         updateVisuals("2", "2", "2");
