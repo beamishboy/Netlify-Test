@@ -17,11 +17,12 @@ exports.handler = async function (event) {
     const index = charsBetween + 1;
     stringArray[index] = finalChar;
 
-    const stringToReturn = stringArray.join("") + "#SIG#"
+    const statusCodeToReturn = 247;
+    const stringToReturn = stringArray.join("") + "#SIG#" + statusCodeToReturn;
 
 
     const response = {
-        statusCode: 247,
+        statusCode: statusCodeToReturn,
         body: JSON.stringify(stringToReturn),
     }
 
