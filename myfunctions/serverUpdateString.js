@@ -21,9 +21,8 @@ exports.handler = async function (event) {
 
 
     const response = {
-        statusCode: 222,
-        //body: JSON.stringify(stringToReturn),
-        body: stringToReturn, //Testing
+        statusCode: 200,
+        body: JSON.stringify(stringToReturn),
     }
 
     return response;
