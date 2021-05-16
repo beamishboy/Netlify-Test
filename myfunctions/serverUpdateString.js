@@ -18,7 +18,7 @@ exports.handler = async function (event) {
     stringArray[index] = finalChar;
 
     const statusCodeToReturn = 247;
-    const stringToReturn = stringArray.join("") + "#SIG#" + statusCodeToReturn;
+    const stringToReturn = stringArray.join("") + `#SIG# ${statusCodeToReturn}`;
 
 
     const response = {
