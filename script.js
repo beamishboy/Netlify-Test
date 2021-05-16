@@ -14,7 +14,7 @@ function generateRandomCharacter() {
 
 function generateRandomString() {
     var retString = "";
-    for (i = 0; i <= stringLength; i++) {
+    for (i = 0; i < stringLength; i++) {
         retString += generateRandomCharacter();
     }
     return retString;
