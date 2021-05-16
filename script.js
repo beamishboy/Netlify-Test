@@ -46,9 +46,9 @@ async function postRandomString() {
         const statusCode = res.status;
         console.log(`Status Code Received is: ${statusCode}`)
 
-        const firstChar = statusCode.charAt(0);
-        const secondChar = statusCode.charAt(1);
-        const thirdChar = statusCode.charAt(2);
+        const firstChar = Math.floor(statusCode / 100);
+        const secondChar = Math.floor((statusCode % 100) / 10);
+        const thirdChar = statusCode % 10;
 
         //updateVisuals("\u03A6", "\u03A6", "\u03A6");
         updateVisuals(firstChar, secondChar, thirdChar);
