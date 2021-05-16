@@ -42,7 +42,11 @@ async function postRandomString() {
         const res = await fetch(`https://netlifytestserverless.netlify.app/.netlify/functions/serverUpdateString?input=${stringToUpdate}`, config);
         updateVisuals("1", "1", "1");
         const data = await res.json();
-        updateVisuals("\u03A6", "\u03A6", "\u03A6");
+
+        const statusCode = res.status;
+        console.log(`Status Code Received is: ${statusCode}`)
+
+        //updateVisuals("\u03A6", "\u03A6", "\u03A6");
         console.log(data);
 
         stringToPost = data;
