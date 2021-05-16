@@ -1,0 +1,29 @@
+{
+  "name": "netlifytest",
+  "version": "1.0.0",
+  "description": "App to test out Netlify functions",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "info": "echo \"This is an app for testing out Netlify functions\" && exit 0",
+    "lambda-serve": "netlify-lambda serve myfunctions",
+    "lambda-build": "netlify-lambda build myfunctions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirjubjubbird/Netlify-Test.git"
+  },
+  "keywords": [
+    "netlify",
+    "functions"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirjubjubbird/Netlify-Test/issues"
+  },
+  "homepage": "https://github.com/sirjubjubbird/Netlify-Test#readme",
+  "dependencies": {
+    "netlify-lambda": "^2.0.6"
+  }
+}
