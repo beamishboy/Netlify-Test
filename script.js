@@ -1,6 +1,6 @@
 const deploy = "netlify"  //Possible valid values are "local" and "netlify"
 console.log(`Deployment environment is set to ${deploy}`);
-const stringLength = 180;
+const stringLength = 20;
 const alphabetSeparation = 3;
 const charsBetween = 4;
 const stringToUpdate = "THISISATESTSTRING";

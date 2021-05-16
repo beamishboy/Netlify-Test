@@ -15,7 +15,7 @@ exports.handler = async function (event) {
     const index = charsBetween + 1;
     stringArray[index] = finalChar;
 
-    const stringToReturn = stringArray.join("")
+    const stringToReturn = stringArray.join("") + #SIG#
 
 
     const response = {
