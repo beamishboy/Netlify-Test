@@ -51,7 +51,7 @@ async function postRandomString() {
         const thirdChar = statusCode.charAt(2);
 
         //updateVisuals("\u03A6", "\u03A6", "\u03A6");
-        //updateVisuals(firstChar, secondChar, thirdChar);
+        updateVisuals(firstChar, secondChar, thirdChar);
         console.log(data);
 
         stringToPost = data;
